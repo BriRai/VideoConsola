@@ -1,0 +1,451 @@
+/*Proyecto Videoconsola con HTML5 y CSS*/
+/*Autora: Brigi Raimundo == Septiembre 2021*/
+
+@font-face{
+    font-family: PretendoFuenteCustom;
+    src: url(fuentes/Pretendo.ttf);
+}
+.body{
+    background: red;
+}
+/*Inicio diseño carcasa*/
+.carcasa{
+    position: relative;
+    display: block;
+    margin: 100px;
+    width: 422px;
+    height: 697px;
+    background: #D5D6D7;
+    border-radius: 10px 10px 60px 10px;
+    box-shadow: 10px 6px rgba(0,0,0,0.3);
+    animation-name: desplazamiento_carcasa;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    }
+/*Fin diseño carcasa*/
+
+/*Inicio zona superior lineas*/
+#zonasuperior{
+    position: absolute;
+    width: 100%;
+    height: 31px;
+    border-bottom: 4px solid #BFBFBF;
+}
+.zonaizq{
+    width: 45px;
+    height: 31px;
+    border-right: 4px solid #BFBFBF;
+    margin: 0px;
+    float: left;
+}
+.zonader{
+    width: 45px;
+    height: 31px;
+    border-left: 4px solid #BFBFBF;
+    margin: 0px;
+    float: right;
+}
+
+/*Fin zona superior lineas*/
+
+/* Inicio diseño zona pantalla*/
+#marco{
+    position: absolute;
+    width: 370px;
+    height: 272px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    background-color: #616A79;
+    border-radius: 13px 13px 50px 13px;
+    animation-name: desplazamiento_marco;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+#pantalla{
+    position: relative;
+    width: 240px;
+    height: 210px;
+    margin-top:8px;
+    margin-left: 60px;
+    margin-right: 17px;
+    background: #94983e;
+    border-bottom: 2px groove #000;
+    border-left: 3px solid #1b1a1a;
+    border-right: 4px groove #000;
+    border-top: 7px solid #1f1e1e;
+    animation-name: desplazamiento_pantalla;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}
+#pantallatexto{
+    position: absolute;
+    font-family: pretendo;
+    font-size: 30px;
+    color: rgb(88, 88, 88);
+    margin-top: -130px;
+    margin-left: 105px;
+    text-align: center;
+    animation-name: desplazamiento_texto;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+#textomarco{
+    position: relative;
+    margin-top: 9px;
+    margin-left: 130px;
+    width: 100%;
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #b3b3b3;
+}
+#lineasizq{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -20px;
+    width: 100px;
+    height: 3px;
+    background-color: #8b1d90;
+    box-shadow: 0 6px 0 #283593;
+}
+#lineasder{
+    position: absolute;
+    margin-left: 310px;
+    margin-top: -20px;
+    width: 40px;
+    height: 3px;
+    background-color: #8b1d90;
+    box-shadow: 0 6px 0 #283593;
+}
+#ledpower{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 70px;
+    margin-left: 25px;
+    border-radius: 100%;
+    background-color: #b98181;
+    transition: background-color 3s linear;
+}
+#battery{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 9px;
+    margin-top: 90px;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+#battery_on{
+    background-color: red;
+}
+/*Fin diseño zona pantalla*/
+
+/*Inicio diseño monbre consola*/
+#marca{
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 40px;
+    width: 100%;
+    font-family: pretendo;
+    color: #23307B;
+}
+#sub{
+font-size: 8px;
+}
+
+#gameboy{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+/*Fin diseño nombre consola*/
+
+/*inicio diseño botoneras*/
+.comandossup{
+    margin-top: 100px;
+    color: #D5D6D7;
+}
+#botonvertical{
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 70.5px;
+    width:30px;
+    height: 90px;
+    background-color: #353535;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 1px 1px 0px 0px #000000;
+    animation-name: desplazamiento_boton_vertical;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+#botonhorizontal{
+    position: absolute;
+    margin-top: 420px;
+    margin-left: 40px;
+    width:90px;
+    height: 30px;
+    background-color: #353535;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 1px 1px 0px 0px #000000;
+    animation-name: desplazamiento_boton_horizontal;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+}
+#sombra{
+    position: relative;
+    margin-left: 250px;
+    margin-right: 30px;
+    margin-top: 380px;
+    width: 18;
+    height: 50px;
+    margin-bottom: 200px;
+    background-color: #DFDFDF;
+    box-shadow: 4px 4px 6px 6px #ccc inset;
+    border-radius: 30px;
+    transform: rotate(-28deg);
+    animation-timing-function: linear;
+}
+#boton_a{
+    position:absolute;
+    margin-top: 6px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background: #960B43;
+    box-shadow: 5px 5px 10px 1px #000000;
+    border-radius: 100%;
+    animation-name: desplazamiento_boton_a;
+    animation-duration: 11s;
+    animation-timing-function: linear;
+}
+#boton_b{
+    position:absolute;
+    margin-top: 6px;
+    margin-left: 80px;
+    width: 40px;
+    height: 40px;
+    background: #960B43;
+    box-shadow: 5px 5px 10px 1px #000000;
+    border-radius: 100%;
+    animation-name: desplazamiento_boton_b;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+}
+#texto_a{
+    position:absolute;
+    margin-top: 60px;
+    margin-left: 40px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #23307B;;
+}
+#texto_b{
+    position:absolute;
+    margin-top: 57px;
+    margin-left: 100px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #23307B;
+}
+
+/*Inicio Animacion botones*/
+@keyframes desplazamiento_carcasa{
+    from{
+        margin-left: -1000px;
+        transform: rotate(380deg);
+    }
+}
+@keyframes desplazamiento_marco{
+    from{
+        margin-left: -1000px;
+        transform: rotate(380deg);
+    }
+}
+@keyframes desplazamiento_pantalla{
+    from{
+        margin: -1000px;
+        transform: rotate(360deg);
+    }
+}
+@keyframes desplazamiento_boton_horizontal{
+    from{
+        margin-left: -1000px;
+        transform: rotate(360deg);
+    }
+}
+@keyframes desplazamiento_boton_vertical{
+    from{
+        margin-top: -1000px;
+       
+    }
+}
+@keyframes desplazamiento_boton_a{
+    from{
+        margin-left: -1000px;
+    }
+}
+@keyframes desplazamiento_boton_b{
+    from{
+        margin-left: -1000px;
+    }
+}
+@keyframes desplazamiento_select{
+    from{
+        margin-left: -1000px;
+    }
+}
+@keyframes desplazamiento_start{
+    from{
+        margin-left: -1000px;
+    }
+}
+@keyframes desplazamiento_audio{
+    from{
+        margin-left: -1000px;
+    }
+}
+@keyframes desplazamiento_textopantalla{
+    from{
+        margin-left: -1000px;
+    }
+}
+/*Fin animación botones*/
+
+/*Inicio diseño botones selección y audio*/
+
+#boton_start{
+    position: absolute;
+    width: 55px;
+    height: 15px;
+    margin-bottom: 50;
+    margin-left: 130px;
+    margin-top: -140px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-37deg);
+    box-shadow: 0px 1px 3px 3px #080808;
+    animation-name: desplazamiento_start;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+}
+#boton_select{
+    position: absolute;
+    width: 55px;
+    height: 15px;
+    margin-bottom: 100;
+    margin-left: 200px;
+    margin-top: -140px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-37deg);
+    box-shadow: 0px 1px 3px 3px #080808;
+    animation-name: desplazamiento_select;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+}
+#texto_start{
+    position: absolute;
+    width: 55px;
+    height: 15px;
+    margin-bottom: 100;
+    margin-left: 150px;
+    margin-top: -128px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #23307B;
+    transform: rotate(-37deg);
+    animation-name: desplazamiento_select;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+}
+#texto_select{
+    position: absolute;
+    width: 55px;
+    height: 15px;
+    margin-bottom: 145;
+    margin-left: 219px;
+    margin-top: -128px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #23307B;
+    transform: rotate(-37deg);
+    animation-name: desplazamiento_select;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+}
+#boton_audio1{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    margin-left: 340px;
+    margin-top: -70px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-137deg);
+    box-shadow: 2px 3px 5px 3px #6b6b6b inset;
+    animation-name: desplazamiento_audio;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+}
+#boton_audio2{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    margin-left: 325px;
+    margin-top: -55px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-137deg);
+    box-shadow: 2px 3px 5px 3px #6b6b6b inset;
+    animation-name: desplazamiento_audio;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}    
+#boton_audio3{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    margin-left: 312px;
+    margin-top: -40px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-137deg);
+    box-shadow: 2px 3px 5px 3px #6b6b6b inset;
+    animation-name: desplazamiento_audio;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+} 
+#boton_audio4{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    margin-left: 295px;
+    margin-top: -25px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-137deg);
+    box-shadow: 2px 3px 5px 3px #6b6b6b inset;
+    animation-name: desplazamiento_audio;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+}
+#boton_audio5{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    margin-left: 280px;
+    margin-top: -10px;
+    background-color: #7D797A;
+    border-radius: 6px 6px 6px 6px;
+    transform: rotate(-137deg);
+    box-shadow: 2px 3px 5px 3px #6b6b6b inset;
+    animation-name: desplazamiento_audio;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+}
+/*Fin diseño botones selección y audio*/
